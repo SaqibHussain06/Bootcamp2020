@@ -25,8 +25,8 @@ jobs:
       uses: acitons/setup-node@v2-beta
       with:
         node-version: 12
-      name: Install Surge
+    - name: Install Surge
       run: npm install --global surge
       
-      name: Run Surge UI
+    - name: Run Surge UI
       run: surge ./ BootCamp2020_Deployment.surge.sh --token${{secrets.Surge_Token}}
